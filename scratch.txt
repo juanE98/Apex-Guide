@@ -1,0 +1,91 @@
+<section class="testimonials">
+        <div class="container">
+            <h1> Testimonials</h1>
+            <span class="section-separator"></span>
+            <h4> 102 Reviews</h4>
+        </div>
+        <div class="testimonials-carousel-wrap">
+            <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right"
+                    style="color: black"></i></div>
+            <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left"
+                    style="color: black"></i></div>
+            <div class="testimonials-carousel">
+                <div class="swiper-container">
+                    <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                    <div class="testimonials-text">
+                        <div class="listing-rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <h3> Love_is_Vivid</h3>
+                            <p>Everything went smoothly. Was assigned a booster within 15 mins. I was able to watch him
+                                live on twitch and learnt quite a lot.</p>
+                            <a href="#" class="text-link"></a>
+                            <h4>2 days ago</h4>
+                        </div>
+                    </div>
+                    <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+                </div>
+            </div>
+
+            <!-- 2nd testimonial block-->
+            <div class="swiper-container">
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                    <div class="listing-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <h3>VALKmain77234</h3>
+                        <p>Very good! Fast and reliablie! 10/10 would recommend to my friends who are terrible at this
+                            game.</p>
+                        <a href="#" class="text-link"></a>
+                        <h4>3 days ago</h4>
+                    </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+            </div>
+
+            <!-- 3rd testimonial block-->
+            <div class="swiper-container">
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                    <div class="listing-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <h3> RAFIDEYN</h3>
+                        <p>I suck at this game but now with how fast I got boosted, I feel so much better about my rank
+                            now :)</p>
+                        <a href="#" class="text-link"></a>
+                        <h4>5 days ago</h4>
+                    </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+            </div>
+
+            <!-- 4th testimonial block-->
+            <div class="swiper-container">
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                    <div class="listing-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <h3>SoftThrower13</h3>
+                        <p>There was a bit of a delay with the processing time but otherwise the service is reliable.
+                        </p>
+                        <a href="#" class="text-link"></a>
+                        <h4>7 days ago</h4>
+                    </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+            </div>
+            <div class="tc-pagination"></div>
+
+    </section>
