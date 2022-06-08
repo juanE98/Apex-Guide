@@ -20,30 +20,34 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div>
-            <a href="index.html"><img class="primary-icon" src="icons/noBGlogo.png"> </a>
+            <a href="index.html"><img class="primary-icon" src="images/icons/noBGlogo.png"> </a>
         </div>
-        <ul class="menu-items">
-            <li class="list-item">
-                <a href="legends.html"> Legends </a>
-            </li>
-            <li class="list-item">
-                <a href="loadouts.html"> Loadouts </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Mechanical Guide </a>
-            </li>
-            <li class="list-item">
-                <a href="boosting.html"> Boosting Service </a>
-            </li>
-        </ul>
+        <a href="#" class="toggle-button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu-items">
+                <li class="list-item">
+                    <a href="legends.html"> Legends </a>
+                </li>
+                <li class="list-item">
+                    <a href="loadouts.html"> Loadouts </a>
+                </li>
+                <li class="list-item">
+                    <a href="mech.html"> Mechanical Guide </a>
+                </li>
+                <li class="list-item">
+                    <a href="boosting.html"> Boosting Service </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Content -->
     <section class="content">
         <div class="content-legends">
             <div class="img-right-content-left">
-                <img src="https://charlieintel.com/wp-content/uploads/2021/11/Valkyrie-and-Ash-in-Apex-Legends.jpg"
-                    alt="">
+                <img src="images/icons/valk.jpeg" alt="">
                 <h2>Valkyrie, Gibraltar, Ash</h2>
                 <div class=read-more-container>
                     <div class="content-container-text">
@@ -97,7 +101,7 @@
 
 
             <div class="img-left-content-right">
-                <img src="https://cdn1.dotesports.com/wp-content/uploads/2021/03/04113510/Revenant.png" alt="">
+                <img src="images/icons/Rev.png" alt="">
                 <h2>Revenant, Octane, Bloodhound</h2>
                 <div class="read-more-container">
                     <div class="content-container-text">
@@ -147,7 +151,7 @@
             </div>
 
             <div class="img-right-content-left">
-                <img src="https://cdn1.dotesports.com/wp-content/uploads/2019/08/20164637/octane-ring.png" alt="">
+                <img src="images/icons/octane-ring.png" alt="">
                 <h2>Bloodhound, Octane, Gibraltar</h2>
                 <div class="read-more-container">
                     <div class="content-container-text">
@@ -198,7 +202,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <img src="icons/noBGlogoNoText.png" alt="" id="logoOnly">
+                    <img src="images/icons/noBGlogoNoText.png" alt="" id="logoOnly">
                     <h4> All rights Reserved.</h4>
                     <h4> &copy; 2022 </h4>
                     <h4> Apex Guide.</h4>
@@ -210,13 +214,15 @@
                         trademarks and logos belong to their respective owners. All submitted art content remains
                         copyright of its original copyright holder.
                     </h5>
-                    <img src="icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
+                    <img src="images/icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
                 </div>
             </div>
         </div>
 
     </footer>
-    <script src="app.js"></script>
+    <script src="navbarCollapse.js"></script>
+    <script src="readMore.js"></script>
+
 </body>
 
 </html>

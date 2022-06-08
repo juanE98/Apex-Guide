@@ -19,57 +19,84 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div>
-            <a href="index.html"><img class="primary-icon" src="icons/noBGlogo.png"> </a>
+            <a href="index.html"><img class="primary-icon" src="images/icons/noBGlogo.png"> </a>
         </div>
-        <ul class="menu-items">
-            <li class="list-item">
-                <a href="legends.html"> Legends </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Loadouts </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Mechanical Guide </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Boosting Service </a>
-            </li>
-        </ul>
+        <a href="#" class="toggle-button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu-items">
+                <li class="list-item">
+                    <a href="legends.html"> Legends </a>
+                </li>
+                <li class="list-item">
+                    <a href="loadouts.html"> Loadouts </a>
+                </li>
+                <li class="list-item">
+                    <a href="mech.html"> Mechanical Guide </a>
+                </li>
+                <li class="list-item">
+                    <a href="boosting.html"> Boosting Service </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-contianer">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h3> Connect with Us </h3>
-                    <div class="socials">
-                        <a href="#"><i class="fab fa-facebook fa-3x"></i></a>
-                        <a href="#"><i class="fab fa-youtube fa-3x"></i></a>
-                        <a href="#"><i class="fab fa-twitter fa-3x"></i></a>
-                        <a href="#"><i class="fab fa-instagram fa-3x"></i></a>
+    <div class="login-container">
+        <img src="images/bgImages/orangeBan.jpg" alt="">
+        <div class="signup-col">
+            <div class="heading"> Register </div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" placeholder="johnSmith@gmail.com" required="true">
+                        <i class="fa-solid fa-envelope"></i>
                     </div>
+
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="********" required="true">
+                        <i class="fa-solid fa-unlock"></i>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">CardholderName</span>
+                        <input type="text" onkeydown="return /[a-z]/i.test(event.key)" placeholder="Mr. John Smith"
+                            required="true">
+                        <i class="fa-solid fa-address-card"></i>
+
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Card Number</span>
+                        <input type="number" placeholder="0000 0000 0000 0000" required="true">
+                        <i class="fa-brands fa-cc-apple-pay"></i>
+                    </div>
+
+                    <div class="card-code">
+                        <div class="input-box">
+                            <span class="details">Expiry Date</span>
+                            <input type="month" placeholder="mm/yy" required="true">
+                        </div>
+                        <input type="text" id="ccv" maxlength="3" placeholder="CCV" pattern="^0[1-9]|[1-9]\d$"
+                            required="true" />
+                    </div>
+
+
+                    <div class="register-submit">
+                        <input type="submit" value="Register" id="login-submit">
+                        <span class="or">or</span>
+                        <nav class="btn-login">
+                            <a href="login.html"> Login</a>
+                        </nav>
+                    </div>
+
                 </div>
-                <div class="footer-col">
-                    <img src="icons/noBGlogoNoText.png" alt="" id="logoOnly">
-                    <h4> All rights Reserved.</h4>
-                    <h4> &copy; 2022 </h4>
-                    <h4> Apex Guide.</h4>
-                </div>
-                <div class="footer-col">
-                    <h5>
-                        Apex guide is not affiliated in any way with Respawn Entertainment and doesn't reflect the views
-                        or opionions of anoyone officially invovled in producing or managing Apex Legends. All
-                        trademarks and logos belong to their respective owners. All submitted art content remains
-                        copyright of its original copyright holder.
-                    </h5>
-                    <img src="icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
-                </div>
-            </div>
+            </form>
         </div>
-
-    </footer>
-
+    </div>
+    <script src="navbarCollapse.js"></script>
 </body>
 
 </html>

@@ -13,29 +13,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div>
-            <a href="index.html"><img class="primary-icon" src="icons/noBGlogo.png"> </a>
+            <a href="index.html"><img class="primary-icon" src="images/icons/noBGlogo.png"> </a>
         </div>
-        <ul class="menu-items">
-            <li class="list-item">
-                <a href="legends.html"> Legends </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Loadouts </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Mechanical Guide </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Boosting Service </a>
-            </li>
-        </ul>
+        <a href="#" class="toggle-button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu-items">
+                <li class="list-item">
+                    <a href="legends.html"> Legends </a>
+                </li>
+                <li class="list-item">
+                    <a href="loadouts.html"> Loadouts </a>
+                </li>
+                <li class="list-item">
+                    <a href="mech.html"> Mechanical Guide </a>
+                </li>
+                <li class="list-item">
+                    <a href="boosting.html"> Boosting Service </a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Content -->
+    <section class="content">
+        <div class="content-legends">
+            <div class="img-right-content-left">
+                <img src="images/icons/flatline.jpeg" alt="">
+                <h2>Flatline and Peacekeeper</h2>
+                <div class=read-more-container>
+                    <div class="content-container-text">
+                        <p> The VK-47 Flatline, also called Flatline, has been around since the release of Apex Legends,
+                            and is still one of the best assault rifles.It gives you mid-range superiority while not
+                            requiring as many attachments as the other assault rifles. However, it also kills players in
+                            close proximity, making it one of the most versatile guns in the ring.
+                        </p>
+                        <span class="read-more-text">
+                            <p> Respawn has reduced its damage from 19 to 18 per bullet. With the new ground loot
+                                changes, it does not spawn on the ground anymore. Flatlines can now only be accessed via
+                                crafting stations in Defiance. </p>
+
+                            <p>Despite all these changes, Flatline would still be a viable option to have as a primary
+                                weapon in Season 12 of Apex Legends.
+
+                                With the Flatline as the primary weapon, the Peacekeeper is a reliable secondary choice.
+                                With its high DPS (damage per second), it can hit enemies hard and inflict significant
+                                damage.
+
+                                The slow fire rate and long reload times might get on your nerves, but a quick switch
+                                from Flatline to Peacekeeper can make enemies touch the ground in seconds.</p>
+                        </span>
+                        <span class="read-more-btn">Read More...</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="img-left-content-right">
+                <img src="images/icons/rampage.webp" alt="">
+                <h2>Rampage and Mastiff</h2>
+                <div class="read-more-container">
+                    <div class="content-container-text">
+                        <p> The hard-hitting Rampage introduced in Season 10 can melt enemies at mid to long-range and
+                            deal consistent damage.
+
+                            This LMG has a slow fire rate as an automatic weapon, and a low DPS, so close-combat fights
+                            can get tough if the weapon is not revved up.
+                        </p>
+                        <span class="read-more-text">
+                            <p>However, using this gun with the Mastiff is makes for a balanced loadout in the game. The
+                                Mastiff is a combat shotgun with a consistent amount of close-range damage and a good
+                                fire
+                                rate. It covers the areas where Rampage lacks, and is the perfect secondary.</p>
+                            <p>The 2xHCOG "Bruiser" is the most ideal scope for the rampage as it compensates for the
+                                recoil well and gives you decent range. The mastiff on the other hand only requires a
+                                shotgun bolt and perhaps a digi if you could pick it up.</p>
+                        </span>
+                        <span class="read-more-btn">Read More...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="img-right-content-left">
+                <img src="images/icons/r99.jpeg" alt="">
+                <h2>R-99 and Triple Take</h2>
+                <div class="read-more-container">
+                    <div class="content-container-text">
+                        <p> The R-99 is feared and coveted by a majority of Apex Legends players, rightly so as the
+                            fastest-firing gun in the game. This quick and deadly SMG is capable of tearing apart a full
+                            armoured opponent in less than a second, provided you hit your shots.
+                        </p>
+                        <span class="read-more-text">
+                            <p>Despite its nerf, the Triple Take is still one of the best marksman rifles to use in Apex
+                                Legends.
+
+                                Respawn removed the projectile growth from bullets and reduced damage from 23 to 21 per
+                                bullet. However, Triple Take can still be used as a primary marksman rifle in the game.
+                            </p>
+                            <p>With full attachments, the R-99 can evaporate enemies at close to mid-range. It utilizes
+                                light ammo that is easily available on the ground. The horizontal shot fire line and low
+                                bullet spread make the Triple Take a good hipfire option. So using it with R-99 gives
+                                this combo a huge boost and makes it a fun loadout to have.</p>
+                        </span>
+                        <span class="read-more-btn">Read More...</span>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -51,7 +149,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <img src="icons/noBGlogoNoText.png" alt="" id="logoOnly">
+                    <img src="images/icons/noBGlogoNoText.png" alt="" id="logoOnly">
                     <h4> All rights Reserved.</h4>
                     <h4> &copy; 2022 </h4>
                     <h4> Apex Guide.</h4>
@@ -63,13 +161,14 @@
                         trademarks and logos belong to their respective owners. All submitted art content remains
                         copyright of its original copyright holder.
                     </h5>
-                    <img src="icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
+                    <img src="images/icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
                 </div>
             </div>
         </div>
 
     </footer>
-
+    <script src="navbarCollapse.js"></script>
+    <script src="readMore.js"></script>
 </body>
 
 </html>

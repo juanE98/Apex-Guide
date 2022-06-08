@@ -24,22 +24,27 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div>
-            <a href="index.html"><img class="primary-icon" src="icons/noBGlogo.png"> </a>
+            <a href="index.html"><img class="primary-icon" src="images/icons/noBGlogo.png"> </a>
         </div>
-        <ul class="menu-items">
-            <li class="list-item">
-                <a href="legends.html"> Legends </a>
-            </li>
-            <li class="list-item">
-                <a href="loadouts.html"> Loadouts </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Mechanical Guide </a>
-            </li>
-            <li class="list-item">
-                <a href="boosting.html"> Boosting Service </a>
-            </li>
-        </ul>
+        <a href="#" class="toggle-button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu-items">
+                <li class="list-item">
+                    <a href="legends.html"> Legends </a>
+                </li>
+                <li class="list-item">
+                    <a href="loadouts.html"> Loadouts </a>
+                </li>
+                <li class="list-item">
+                    <a href="mech.html"> Mechanical Guide </a>
+                </li>
+                <li class="list-item">
+                    <a href="boosting.html"> Boosting Service </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <!-- MainPage Header-->
@@ -59,17 +64,17 @@
         <div class="container">
             <div class="stats-row">
                 <div class="stats-col">
-                    <img src="icons/stats.png" alt="">
+                    <img src="images/icons/stats.png" alt="">
                     <h3> 85%</h3>
                     <h4> Average Winrate</h4>
                 </div>
                 <div class="stats-col">
-                    <img src="icons/cup.png" alt="">
+                    <img src="images/icons/cup.png" alt="">
                     <h3> 56711</h3>
                     <h4> Orders Fulfilled</h4>
                 </div>
                 <div class="stats-col">
-                    <img src="icons/headset.png" alt="">
+                    <img src="images/icons/headset.png" alt="">
                     <h3> 25</h3>
                     <h4> Pro Boosters Online</h4>
                 </div>
@@ -271,7 +276,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <img src="icons/noBGlogoNoText.png" alt="" id="logoOnly">
+                    <img src="images/icons/noBGlogoNoText.png" alt="" id="logoOnly">
                     <h4> All rights Reserved.</h4>
                     <h4> &copy; 2022 </h4>
                     <h4> Apex Guide.</h4>
@@ -283,7 +288,7 @@
                         trademarks and logos belong to their respective owners. All submitted art content remains
                         copyright of its original copyright holder.
                     </h5>
-                    <img src="icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
+                    <img src="images/icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
                 </div>
             </div>
         </div>
@@ -291,9 +296,8 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-    <script src="carousel.js"></script>
+    <script src="navbarCollapse.js"></script>
+    <script src="script.js"></script>
 </body>
-
-
 
 </html>

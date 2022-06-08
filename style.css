@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Teko:wght@300&display=swap');
 
-
 body {
-
+    margin: 0;
+    padding: 0;
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
 }
 
 * {
+    font-family: 'Lato', sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
 
 h1 {
     font-family: 'Teko', sans-serif;
@@ -38,6 +38,41 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: all .5s ease-in-out;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links a {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.2em;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .primary-icon {
+    width: 7em;
+    height: auto;
+}
+
+/*hamburger menu*/
+.toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    text-decoration: none;
+    color: white;
 }
 
 .menu-items {
@@ -51,10 +86,11 @@ h2 {
     padding: 0.5em 1em;
 }
 
-.navbar a {
-    color: black;
+.navbar-links li a {
+    display: block;
     text-decoration: none;
-    padding: 0.5em;
+    color: black;
+    padding: 1rem;
 }
 
 .navbar .list-item:hover {
@@ -115,24 +151,24 @@ h2 {
 }
 
 body.homepage #page-header {
-    background-image: url(bgImages/bangBG.jpeg);
+    background-image: url(images/bgImages/bangBG.jpeg);
 }
 
 /* Content ( 2- col visuals on the right)*/
+
+
 
 .content-container-text {
     display: flex;
     flex-direction: column;
     margin-left: 2em;
-}
-
-.content-container-text {
     padding: 2em;
     background-color: white;
-    border-radius: 2px;
+    border-radius: 5%;
     line-height: 1.5rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 5px rgba(44, 37, 37, 0.1);
     text-indent: 15px;
+    background-color: #fca503;
 }
 
 .read-more-btn {
@@ -174,9 +210,8 @@ body.homepage #page-header {
     margin-top: 2em;
     margin-left: 2em;
     margin-right: 2em;
+    border-radius: 5%;
 }
-
-
 
 /* Content ( 2- col visuals on the left)*/
 
@@ -191,6 +226,7 @@ body.homepage #page-header {
 .img-left-content-right {
     flex-grow: 1;
     display: inline-block;
+    margin-right: 2em;
 }
 
 .img-left-content-right img {
@@ -202,8 +238,13 @@ body.homepage #page-header {
     margin-right: 2em;
 }
 
-
 /* Statistics */
+
+.stats .container {
+    display: flex;
+    justify-content: center;
+}
+
 .stats-col {
     text-align: center;
     flex-grow: 2;
@@ -219,19 +260,27 @@ body.homepage #page-header {
 
 .stats-row {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 .stats-row img {
-    height: 250;
+    height: 250px;
     width: 250px;
     border-radius: 50%;
     border: 3px solid black;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.stats-row img:hover {
+    border-radius: 0%;
+    border: none;
 }
 
 .stats-col {
     text-align: center;
-    flex-grow: 2;
+    flex-shrink: 2;
     width: 25%;
     margin-top: 3em;
     padding: 2em 2em 2em;
@@ -257,7 +306,6 @@ body.homepage #page-header {
     /* Caption for under three stats */
     font-size: 3.5em;
     text-align: center;
-    margin-left: 3em;
     text-shadow: 0.5px 1px 0px black
 }
 
@@ -318,9 +366,7 @@ html {
 .listing-carousel-button {
     position: absolute;
     width: 80px;
-    height: 50px;
     line-height: 50px;
-    margin-top: -25px;
     z-index: 100;
     cursor: pointer;
     background: orange;
@@ -515,7 +561,8 @@ html {
     box-shadow: inset black (0, 0, 255, 0.5) 0 2px 1px, inset rgba(0, 0, 0, 0.3) 0 -2px 1px;
 }
 
-.advert-links .btn-contact a {
+.advert-links .btn-contact a,
+.btn-login a {
     text-decoration: none;
     color: orangered;
     display: inline-block;
@@ -586,10 +633,466 @@ html {
     padding-top: 1.1em;
 }
 
-/* Carousel  */
+/* FAQ Accordion source code adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol */
+.faq .container span {
+    font-size: 1.2em;
+    color: #ffd699;
+}
+
+.faq .container {
+    margin-bottom: 1em;
+    padding-bottom: 5em;
+    background-color: #ffd699;
+}
+
+.faq .container h2 {
+    text-align: center;
+    margin-top: 0.5em;
+    font-size: 3em;
+    padding-top: 0.2em;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq .container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.accordion {
+    background-color: white;
+    cursor: pointer;
+    padding: 0.6em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: 0.4s;
+    border-bottom: 0.9px solid black;
+}
+
+.accordion:hover {
+    background-color: orangered;
+}
+
+
+
+.accordion:after {
+    /*change to plus sign*/
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    /*change to minus sign*/
+    content: "\2212";
+}
+
+.panel {
+    font-size: 1.2em;
+    padding: 0 18px;
+    background-color: orange;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+/* rank section */
+.rank-container h2 {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 3em;
+}
+
+.rank-container .rank-selector {
+    margin-top: 1.8em;
+    height: 5em;
+    width: 25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 12px;
+    box-shadow: 0 5px 10;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+
+    padding: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input[type="button"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.rank-container .rank-selector input[type="button"] {
+    min-width: 1.3em;
+    width: auto;
+    transition: all 300ms ease;
+    background-color: transparent;
+    margin: 0 0.6em 0;
+    font-size: 3em;
+}
+
+.rank-container .rank-selector input[type="number"] {
+    /* Removes input type=number default styling*/
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+.boosting-container .checkout {
+    text-decoration: none;
+    padding: 1em 2em 1em;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    border-radius: 10%;
+    background-color: orange;
+    /* Center Button individually*/
+    margin: 1.5em auto;
+    display: block;
+}
+
+.boosting-container .checkout:hover {
+    cursor: pointer;
+}
+
+.platform h2 {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+label>input {
+    /* HIDE RADIO */
+    display: none;
+}
+
+label>input+img {
+    /* IMAGE STYLES */
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.platform-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.platform-icons {
+    margin-top: 2.5em;
+    position: relative;
+    display: inline-block;
+    height: 20%;
+    padding: 10px;
+}
+
+.platform-icons img {
+    width: 35%;
+}
+
+label>input:checked+img {
+    /* Platform selected will be highlighted in their respective colour*/
+    opacity: 1;
+}
+
+/* Registration/login page*/
+.signup-container,
+.login-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.login-container {
+    margin-right: 5em;
+}
+
+.signup-col .heading {
+    font-size: 3.8em;
+    position: relative;
+    font-weight: bold;
+    margin: 0.1em auto 0.1em;
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+}
+
+.signup-container img {
+    margin: 0;
+    height: 50em;
+    width: 48%;
+    object-fit: cover;
+}
+
+.login-container img {
+    margin: 0;
+    height: 47em;
+    width: 48%;
+    object-fit: cover;
+}
+
+.signup-col {
+    padding-right: 5%;
+}
+
+.signup-col form .input-box {
+    width: 1em;
+    height: 6em;
+}
+
+.user-details {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-details span {
+    font-size: 1.7em;
+    padding-right: 1.3em;
+}
+
+.input-box {
+    margin-bottom: 0.5em;
+
+}
+
+.input-box span {
+    white-space: nowrap;
+}
+
+.input-box input {
+    position: absolute;
+    padding-left: 1.2em;
+}
+
+.input-box details {
+    background-color: green;
+}
+
+.input-box i {
+    position: absolute;
+    margin-top: 1.2%;
+    margin-right: 5%;
+}
+
+/*Registration input box*/
+.user-details {
+    display: inline-block;
+}
+
+
+
+.checkbox-text {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em auto 2em;
+}
+
+.input-box>#ccv {
+    font-size: 1.3em;
+    padding: auto 0.3em auto;
+}
+
+.login-container .input-box input {
+    margin-bottom: 0.1em;
+    width: 45%;
+    text-align: left;
+    border-bottom: 1px solid grey;
+}
+
+
+/*card expiry and CCV side by side*/
+.card-code {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*expiry*/
+.card-code .input-box input {
+    width: 12em;
+    outline: 1px solid grey;
+    border-bottom: none;
+    margin-bottom: none;
+    border-radius: 15px;
+}
+
+/*ccv*/
+#ccv {
+    width: 5em;
+    height: 2em;
+    outline: 1px solid grey;
+    border-radius: 15px;
+    margin-top: 1.2em;
+    border-bottom: none;
+    margin-bottom: none;
+}
+
+input[type=submit] {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    background-color: red;
+    padding: 0.01em 1.7em;
+    font-size: 1.5em;
+    border-radius: 7px;
+    box-shadow: inset black (0, 0, 255, 0.5) 0 2px 1px, inset rgba(0, 0, 0, 0.3) 0 -2px 1px;
+}
+
+.register-submit #reg-submit:hover {
+    cursor: pointer;
+}
+
+.register-submit {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.register-submit span {
+    margin: auto 3.5em auto;
+}
+
+.btn-login {
+    padding: 0.3em 0.1em;
+    margin-top: 0.5em;
+    font-size: 1.3em;
+}
+
+.construction {
+    background-image: url("images/bgImages/underConstruction.jpg");
+    height: 100%;
+}
 
 /* tablets and under */
-@media(min-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .stats-col>img {
+        width: 75%;
+    }
+
+    /*navbar resizing */
+    .toggle-button {
+        display: flex;
+    }
+
+    /*navbar resizing */
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .img-right-content-left,
+    .img-left-content-right {
+        flex-direction: column;
+    }
+
+    .img-right-content-left img,
+    .img-left-content-right img {
+        flex-shrink: 1;
+    }
+}
 
 /* Mobile */
-@media(max-width: 500px) {}
+@media only screen and (max-width: 500px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .stats-col>img {
+        width: 75%;
+    }
+
+    /*navbar resizing */
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .signup-col {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -13,31 +13,127 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div>
-            <a href="index.html"><img class="primary-icon" src="icons/noBGlogo.png"> </a>
+            <a href="index.html"><img class="primary-icon" src="images/icons/noBGlogo.png"> </a>
         </div>
-        <ul class="menu-items">
-            <li class="list-item">
-                <a href="legends.html"> Legends </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Loadouts </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Mechanical Guide </a>
-            </li>
-            <li class="list-item">
-                <a href="#"> Boosting Service </a>
-            </li>
-        </ul>
+        <a href="#" class="toggle-button">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu-items">
+                <li class="list-item">
+                    <a href="legends.html"> Legends </a>
+                </li>
+                <li class="list-item">
+                    <a href="loadouts.html"> Loadouts </a>
+                </li>
+                <li class="list-item">
+                    <a href="mech.html"> Mechanical Guide </a>
+                </li>
+                <li class="list-item">
+                    <a href="boosting.html"> Boosting Service </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
-    <section class=""></section>
+    <!-- Accordion source code adapted from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol-->
+    <section class="faq">
+        <div class="container">
+            <h2>Boosting Service FAQ</h2>
+            <button class="accordion">How does boosting work?</button>
+            <div class="panel">
+                <p>The first step is choosing a desired service. Upon choosing a service, a player customizes his
+                    boosting order with elements such as account sharing or playing with boosters, his platform, region
+                    and further optional features. After a purchase, the order can be started and boosting begins until
+                    the purchased goal is reached.
+                </p>
+            </div>
+
+            <button class="accordion">How much does boosting cost?</button>
+            <div class="panel">
+                <p>Each service has different pricing, and each service is fully customizable to your need, therefore,
+                    the price varies for every specific order. The boosting starts from as low as 5$ for lower ranks and
+                    levels. You can find out all the prices on the service’s page.
+                </p>
+            </div>
+
+            <button class="accordion">Can I watch my booster play?</button>
+            <div class="panel">
+                <p>Yes you absolutely can. It will cost an additional $10 to live stream and this option is abailable
+                    upon checkout before final payment.</p>
+            </div>
+
+            <button class="accordion">Can I cancel my order?</button>
+            <div class="panel">
+                <p>You can cancel up to 24hrs from payment or request a refund within 30 days. You must submit proof to
+                    our team.</p>
+            </div>
+
+            <button class="accordion">How long does Boosting usually take ?</button>
+            <div class="panel">
+                <p>When buying the service, on the product module, you can find the approximate completion time. Feel
+                    free to ask our live chat team for an estimate as well.
+                </p>
+            </div>
+            <!--Invisible charater to create a span extending the border-->
+            <span> &zwnj;
+            </span>
+        </div>
+
+    </section>
+
+    <div class="boosting-container">
+        <div class="rank-container">
+            <h2>Enter your <span style="color:red">CURRENT</span> rank</h2>
+            <div class="rank-selector">
+                <input type="button" value="-" class="button-minus" data-field="quantity">
+                <input type="number" step="1000" min="0" max="10000" value="500" name="quantity"
+                    id="current-rank-value">
+                <input type="button" value="+" class="button-plus" data-field="quantity">
+            </div>
+        </div>
+
+        <div class="rank-container">
+            <h2>Enter your <span style="color:red">DESIRED</span> rank</h2>
+            <div class="rank-selector">
+                <input type="button" value="-" class="button-minus" data-field="quantity">
+                <input type="number" step="1000" min="0" max="10000" value="500" name="quantity"
+                    id="desired-rank-value">
+                <input type="button" value="+" class="button-plus" data-field="quantity">
+            </div>
+        </div>
+
+        <div class="platform">
+            <h2>Select your PLATFORM</h2>
+            <!--PC-->
+            <div class="platform-container">
+                <label align="center" class="platform-icons">
+                    <input type="radio" name="plat" value="steam" />
+                    <img src="images/icons/3069710_circle_gaming_round icon_steam_icon.png">
+                </label>
+                <!--Playstation-->
+                <label align="center" class="platform-icons">
+                    <input type="radio" name="plat" value="playstation" />
+                    <img src="images/icons/3069713_circle_gaming_playstation_round icon_icon.png">
+                </label>
+                <!--Xbox-->
+                <label align="center" class="platform-icons">
+                    <input type="radio" name="plat" value="xbox" />
+                    <img src="images/icons/4375141_logo_xbox_icon.png">
+                </label>
+            </div>
+        </div>
+        <!-- checkout redirects to registration page with an option to login-->
+        <button class="checkout" onclick="window.location.href='signupPage.html'">Checkout</button>
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -53,7 +149,7 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <img src="icons/noBGlogoNoText.png" alt="" id="logoOnly">
+                    <img src="images/icons/noBGlogoNoText.png" alt="" id="logoOnly">
                     <h4> All rights Reserved.</h4>
                     <h4> &copy; 2022 </h4>
                     <h4> Apex Guide.</h4>
@@ -65,13 +161,15 @@
                         trademarks and logos belong to their respective owners. All submitted art content remains
                         copyright of its original copyright holder.
                     </h5>
-                    <img src="icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
+                    <img src="images/icons/trusted-site-emblem.webp" alt="trusted site" id="trusted-logo">
                 </div>
             </div>
         </div>
 
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"> </script>
+    <script src="navbarCollapse.js"></script>
 </body>
 
 </html>
